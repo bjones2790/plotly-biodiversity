@@ -123,14 +123,15 @@ function buildCharts(sample) {
 
     // Deliverable 2: 1. Create the trace for the bubble chart.
     var bubbleData = [{
+      type: "bubble",
       x: otu_ids,
       y: sample_values,
       text: otu_labels,
       mode: 'markers',
       marker: {
-        size: sample_values,
         color: otu_ids,
-        colorscale: "Reds"
+        size: sample_values,
+        colorscale: "Blues"
       }
     }];
 
@@ -144,31 +145,29 @@ function buildCharts(sample) {
     };
 
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", [bubbleData], bubbleLayout, {responsive: true});
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout, {responsive: true});
 
     // Deliverable 3: 4. Create the trace for the gauge chart.
     var gaugeData = [{
-      type: "indicator",
+      type: "gauge",
       mode: "gauge+number",
       value: washFrequency,
-      title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per week"},
+      title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per week", font: {size:24} },
       gauge: {
-          axis: {range: [null, 10], tickcolor: "blue",
-          tickmode: "array",
-          tickvals: [0,2,4,6,8,10],
-          ticktext: [0,2,4,6,8,10]
-          },
-          bar: {color: "black"},
-          bgcolor: "white",
-          bordercolor: "white",
-          steps: [
-            { range: [0, 2], color: "red" },
-            { range: [2, 4], color: "orange" },
-            { range: [4, 6], color: "yellow" },
-            { range: [6, 8], color: "lime" },
-            { range: [8, 10], color: "green" }]
-        }
+        axis: {range: [null, 10], tickcolor: "darkblue",},
+        bar: {color: "black"},
+        bgcolor: "white",
+        borderwidth: 2,
+        bordercolor: "white",
+        steps: [
+          { range: [0, 2], color: "red" },
+          { range: [2, 4], color: "orange" },
+          { range: [4, 6], color: "yellow" },
+          { range: [6, 8], color: "lime" },
+          { range: [8, 10], color: "green" }
+        ],
       }
+    }
     ];
 
     // Deliverable 3: 5. Create the layout for the gauge chart.
