@@ -3,4 +3,5 @@ This dashboard uses Plotly.js to display interactive data trends on common bacte
 
 Users can access the dashboard by following this link: https://bjones2790.github.io/plotly-biodiversity/
 
-![image](https://user-images.githubusercontent.com/112994018/206557776-ce7354d2-9454-497a-8860-d6424ad11c8c.png)
+![image](https://user-images.githubusercontent.com/112994018/206557992-fbda7eef-ee8f-4451-bfba-176748f99d68.png)
+
