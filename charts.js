@@ -93,12 +93,14 @@ function buildCharts(sample) {
       type: "bar",
       x: sample_values.slice(0,10).reverse(),
       y: yticks,
+      orientation: 'h',
       text: otu_labels.slice(0,10).reverse(),
     }];
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Per Sample",
+      margin: {t: 25, 1: 150},
       yaxis: {
         tickmode: "array",
         tickvals: [0,1,2,3,4,5,6,7,8,9],
