@@ -106,15 +106,6 @@ function buildCharts(sample) {
         tickvals: [0,1,2,3,4,5,6,7,8,9],
         ticktext: yticks
       },
-      annotations: [{
-        xref: 'paper',
-        yref: 'paper',
-        x: 0.5,
-        xanchor: 'center',
-        y: -0.25,
-        yanchor: 'center',
-        showarrow: false
-      }]
     };
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
@@ -130,7 +121,7 @@ function buildCharts(sample) {
       marker: {
         color: otu_ids,
         size: sample_values,
-        colorscale: "Blues"
+        colorscale: "YlGnBu"
       }
     }];
 
@@ -173,9 +164,6 @@ function buildCharts(sample) {
     // // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
       autosize: true,
-      annotations: [{
-        showarrow: false
-      }]
     };
     
     // Deliverable 3: 6. Use Plotly to plot the gauge data and layout.
